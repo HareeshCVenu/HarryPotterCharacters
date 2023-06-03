@@ -1,0 +1,20 @@
+body {
+  text-align: center;
+}
+
+.search-container {
+  margin-bottom: 20px;
+}
+
+#character-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+#character-list li {
+  cursor: pointer;
+}
+
+#character-details {
+  margin-top: 20px;
+}
