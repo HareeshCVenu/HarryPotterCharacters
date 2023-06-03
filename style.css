@@ -1,16 +1,57 @@
+
+:root {
+    --DeepBurgundy: #740001 ; /* Set the color variable */
+    --Gray:#7F7F7F ;
+    --GoldenYellow:#FFD700 ;
+    --ForestGreen :#228B22 ;
+    --Graylight:#F6F6F6 ;
+    --darkgray: #333333; 
+
+  }
+
+
+
 body {
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url(/Background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
 }
 
 .search-container {
   margin-bottom: 20px;
 }
 
+#search-input {
+    width: 300px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    font-size: 20px;
+    outline: none;
+    border-bottom: 2px solid gray;
+  }
+
+  #search-input:focus {
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+
 #character-list {
   list-style-type: none;
   padding: 0;
   overflow-y: scroll;
   max-height: 200px;
+  overflow-y: scroll;
 }
 
 #character-list li {
