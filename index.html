@@ -10,15 +10,22 @@
 </head>
 <body>
     <nav class="navbar">
+        <i class="fas fa-hat-wizard logo-icon"></i>
         <h1 class="navbar-title">Harry Potter Characters</h1>
             <div class="content">
             <div class="search-container">
                 <input type="text" id="search-input" placeholder="Search character...">
-                <i class="fas fa-search search-icon"></i>
+                <div class="navbar-logo">
+                <i class="fas fa-search search-icon logo-text"></i>
                 </div>
     </nav>
+    
+    <div class="secondcontent">
         <ul id="character-list"></ul>
-        <div id="character-details"></div>
+        <div id="character-details-container">
+          <div id="character-details"></div>
+        </div>
+      </div>
     
     <script src="script.js"></script>
 </body>
