@@ -83,3 +83,29 @@ fetch("https://hp-api.onrender.com/api/characters")
 
 // Event listener for search input
 searchInput.addEventListener("input", handleSearchInput);
+
+function handleSearchInput() {
+    const searchTerm = searchInput.value.toLowerCase();
+    const filteredCharacters = characters.filter(character =>
+      character.name.toLowerCase().includes(searchTerm)
+    );
+  
+    characterList.innerHTML = "";
+  
+    filteredCharacters.forEach(character => {
+      const listItem = document.createElement("li");
+      listItem.innerText = character.name;
+      listItem.addEventListener("click", () => displayCharacterDetails(character));
+      characterList.appendChild(listItem);
+    });
+  
+    if (filteredCharacters.length === 0) {
+      characterDetails.innerHTML = "<p>No matching characters found.</p>";
+      characterDetails.style.display = "none";
+      characterList.style.display = "block";
+    } else {
+      characterDetails.innerHTML = "";
+      characterDetails.style.display = "none";
+      characterList.style.display = "block";
+    }
+  }

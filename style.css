@@ -61,18 +61,22 @@ body {
 #character-details {
   margin-top: 20px;
   display: none;
-  text-align: left;
+  text-align: center;
 
 }
 #character-details h2 {
     margin-bottom: 10px;
+    text-align: center;
   }
   
 #character-details p {
     margin: 5px 0;
+    text-align: center;
   }
   
 #character-details img {
     max-width: 200px;
     margin-top: 10px;
+    display: block;
+    margin: 0 auto;
   }
