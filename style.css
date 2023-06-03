@@ -9,6 +9,8 @@ body {
 #character-list {
   list-style-type: none;
   padding: 0;
+  overflow-y: scroll;
+  max-height: 200px;
 }
 
 #character-list li {
@@ -17,4 +19,19 @@ body {
 
 #character-details {
   margin-top: 20px;
+  display: none;
+  text-align: left;
+
 }
+#character-details h2 {
+    margin-bottom: 10px;
+  }
+  
+#character-details p {
+    margin: 5px 0;
+  }
+  
+#character-details img {
+    max-width: 200px;
+    margin-top: 10px;
+  }

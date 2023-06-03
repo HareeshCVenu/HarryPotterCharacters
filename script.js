@@ -7,11 +7,9 @@ function displayCharacterDetails(character) {
   const {
     name,
     alternate_names,
-    species,
     gender,
     house,
     dateOfBirth,
-    yearOfBirth,
     wizard,
     ancestry,
     eyeColour,
@@ -28,11 +26,9 @@ function displayCharacterDetails(character) {
   const html = `
     <h2>${name}</h2>
     <p><strong>Alternate Names:</strong> ${alternate_names.join(", ")}</p>
-    <p><strong>Species:</strong> ${species}</p>
     <p><strong>Gender:</strong> ${gender}</p>
     <p><strong>House:</strong> ${house}</p>
     <p><strong>Date of Birth:</strong> ${dateOfBirth}</p>
-    <p><strong>Year of Birth:</strong> ${yearOfBirth}</p>
     <p><strong>Wizard:</strong> ${wizard ? "Yes" : "No"}</p>
     <p><strong>Ancestry:</strong> ${ancestry}</p>
     <p><strong>Eye Colour:</strong> ${eyeColour}</p>
@@ -47,6 +43,9 @@ function displayCharacterDetails(character) {
   `;
 
   characterDetails.innerHTML = html;
+  characterList.style.display = "none";
+  characterDetails.style.display = "block";
+  window.scrollTo(0, 0);
 }
 
 // Function to handle search input and fetch characters
@@ -67,6 +66,8 @@ function handleSearchInput() {
 
   if (filteredCharacters.length === 0) {
     characterDetails.innerHTML = "<p>No matching characters found.</p>";
+    characterDetails.style.display = "none";
+    characterList.style.display = "block";
   }
 }
 
@@ -77,7 +78,6 @@ fetch("https://hp-api.onrender.com/api/characters")
   .then(response => response.json())
   .then(data => {
     characters = data;
-    handleSearchInput(); // Display all characters initially
   })
   .catch(error => console.log("Error occurred while fetching character data:", error));
 
