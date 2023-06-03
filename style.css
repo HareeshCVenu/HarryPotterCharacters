@@ -80,14 +80,14 @@ body {
 }
 
 #character-list li {
-    margin-top: 10px;
+    margin-top: 30px;
     font-size: 20px;
   cursor: pointer;
 }
 #character-details-container {
   max-height: 600px;
   overflow-y: auto;
-  margin-top: 80px;
+  margin-top: 120px;
 }
 
 #character-details {
